@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 # Install default apps
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get upgrade -y
 RUN apt-get install -y nano sudo build-essential curl
 
 # Set timezone
