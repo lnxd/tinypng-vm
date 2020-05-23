@@ -25,6 +25,9 @@ RUN useradd docker
 RUN echo 'docker:docker' | sudo chpasswd
 RUN usermod -aG sudo docker
 
+# Clean up apt
+RUN apt-get clean all
+
 # Set environment variables.
 ENV HOME /home/docker
 
